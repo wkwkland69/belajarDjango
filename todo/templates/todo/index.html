@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo List</title>
+
+    <!--========== Todo List Css ==========-->
+    <link rel="stylesheet" href={% static 'todo/css/todo.css'%}>
+
+    <!--========== Link FavIcon ==========-->
+    <link rel="shortcut icon" href="https://caldera-links.vercel.app/Assets/Img/logo-white.svg" type="image/x-icon">
+</head>
+
+<body>
+    <section class="container">
+        <div>
+            <div class="header">
+                <div class="header-child">
+                    <h1> <span>Hello Juanda , </span> <br>
+                        Nice To Meet You </h1>
+
+                    <img src="Assets/img/img1.jpeg" alt="profile">
+                </div>
+
+                <form action="post" id="todoCreate">
+                    <input type="text" id="txtString" placeholder="Input your todo">
+                    <input type="submit" value="Add To Do" id="btnSubmit">
+                </form>
+            </div>
+
+            <div class="list">
+                <h3>List of TodoList</h3>
+                <ul id="todoList">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src={% static 'todo/js/todolist.js'%}></script>
+</body>
+
+</html>
